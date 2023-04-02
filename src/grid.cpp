@@ -183,12 +183,6 @@ template void Grid::Free_grid<int **>(int **, int);
 template void Grid::Free_grid<sf::RectangleShape **>(sf::RectangleShape **,
                                                      int);
 
-void Grid::display_grid() const {
-  for (int i = 0; i < nb_columns + 4; ++i) {
-    for (int j = 0; j < nb_lines + 4; ++j) {
-    }
-  }
-};
 
 void Grid::draw_grid() {
   for (int i = 0; i < nb_columns; ++i) {

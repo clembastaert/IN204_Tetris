@@ -547,7 +547,7 @@ void Game::GameScreen() {
       integrate_block_to_grid();
       points = grid.clean_full_lines(current_block->get_list_squares());
       if (points > 0) {
-        player.add_score(points * (player.get_level() + 1)); // f(p,n) = p*(n+1)
+        player.add_score(points * (player.get_level())); // f(p,n) = p*(n+1)
         network.sendDataToHost(player, "update scores");
         player_score.setString(std::to_string(player.get_score()));
         setTextCenterBottomPosition(player_score, pos_score);
